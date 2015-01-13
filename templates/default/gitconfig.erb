@@ -13,10 +13,19 @@
     attributesfile = ~/.gitattributes
     # Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
     whitespace = space-before-tab,indent-with-non-tab,trailing-space
+    # Auto Line endings
+    autocrlf = input
+    safecrlf = true
+    pager = less -FRSX
 
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
-    ui = auto
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    pager = true
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -29,18 +38,20 @@
 [color "status"]
     added = yellow
     changed = green
-    untracked = cyan
+    untracked = red
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
 [help]
 	autocorrect = 1
 
-
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
     remote = origin
     merge = refs/heads/master
+
+[push]
+    default = upstream
 
 # URL shorthands
 [url "git@github.com:"]
