@@ -11,7 +11,7 @@ node.default['bash_it'] ={
         bash_it/custom/base.bash
         bash_it/custom/exports.bash
         bash_it/custom/functions.bash
-        bash_it/custom/skylab.completion.bash
+        bash_it/custom/rbenv.bash
       ]
   },
   'theme' => 'roderik',
