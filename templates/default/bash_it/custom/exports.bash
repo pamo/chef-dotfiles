@@ -13,9 +13,6 @@ export COPYFILE_DISABLE=true
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
 
-#Set TZ using already configured system setting
-export TZ='Europe/Brussels'
-
 # fix multibyte errors in ruby 1.9.x
 #export RUBYOPT='-Ku'
 
