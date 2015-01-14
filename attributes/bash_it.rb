@@ -2,7 +2,7 @@ node.default['bash_it'] ={
   'enabled_plugins' => {
     'aliases'    => %w[ansible bundler general git heroku homebrew osx vagrant vim laravel],
     'completion' => %w[bash-it brew capistrano defaults gem gh git git_flow grunt gulp packer pip rake ssh tmux vagrant virtualbox],
-    'plugins'    => %w[base git rvm ssh vagrant extract node nvm osx ruby]
+    'plugins'    => %w[base git ssh vagrant extract node nvm osx ruby]
   },
   'custom_plugins' => {
       "dotfiles" => %w[
