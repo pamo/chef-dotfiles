@@ -1,7 +1,7 @@
 node['dotfiles']['vimusers'].each do |username|
 
   unless node['etc']['passwd'][username]
-    username = "travis"
+    username = "pamo"
   end
 
   homepath = lambda {
