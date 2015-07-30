@@ -6,5 +6,6 @@ node.default["dotfiles"]["vim"]["bundle"] = [
   {"gitgutter" => "git://github.com/airblade/vim-gitgutter.git"},
   {"airline" => "https://github.com/bling/vim-airline"},
   {"syntastic" => "git://github.com/scrooloose/syntastic.git"},
-  {"nerdtree" => "https://github.com/scrooloose/nerdtree.git"}
+  {"nerdtree" => "https://github.com/scrooloose/nerdtree.git"},
+  {"Ag" => "https://github.com/rking/ag.vim"}
 ]
