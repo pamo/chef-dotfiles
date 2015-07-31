@@ -7,5 +7,7 @@ node.default["dotfiles"]["vim"]["bundle"] = [
   {"airline" => "https://github.com/bling/vim-airline"},
   {"syntastic" => "git://github.com/scrooloose/syntastic.git"},
   {"nerdtree" => "https://github.com/scrooloose/nerdtree.git"},
-  {"Ag" => "https://github.com/rking/ag.vim"}
+  {"Ag" => "https://github.com/rking/ag.vim"},
+  {"titlecase" => "https://github.com/christoomey/vim-titlecase"},
+  {"commentary" => "git://github.com/tpope/vim-commentary.git"}
 ]
