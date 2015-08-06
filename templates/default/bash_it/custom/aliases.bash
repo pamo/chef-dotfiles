@@ -169,3 +169,5 @@ alias varnishon='iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 80 
 alias varnishoff='iptables -t nat -D PREROUTING -i eth0 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 6081;iptables -t nat -D PREROUTING -i eth0 -p tcp -m tcp --dport 6081 -j REDIRECT --to-ports 80'
 alias varnishstatus='iptables -L -t nat |grep -q 6081; if [ "test$?" = "test0" ]; then echo "Varnish On"; else echo "Varnish Off"; fi'
 
+# Get External IP
+alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
