@@ -302,3 +302,38 @@ function np() {
 function tre() {
     tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
 }
+
+# Change terminal theme on the fly
+set_terminal_theme() {
+local name=$1
+osascript <<EOD
+tell application "iTerm"
+    activate
+    tell (make new terminal)
+    launch session "$name"
+    end tell
+end tell
+EOD
+}
+
+dark() {
+osascript <<EOD
+tell application "iTerm"
+    activate
+    tell (make new terminal)
+        launch session "Default"
+    end tell
+end tell
+EOD
+}
+
+light() {
+osascript <<EOD
+tell application "iTerm"
+    activate
+    tell (make new terminal)
+        launch session "Presentation"
+    end tell
+end tell
+EOD
+}
