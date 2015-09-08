@@ -59,4 +59,9 @@ node['bash_it']['custom_plugins'].each do |cookbook_name, custom_plugins|
     action :create_if_missing
   end
 
+  template "~/Library/Preferences/com.googlecode.iterm2.plist" do
+    source "com.googlecode.iterm2.plist"
+    owner username
+  end
+
 end
