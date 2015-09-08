@@ -37,4 +37,26 @@ node['bash_it']['custom_plugins'].each do |cookbook_name, custom_plugins|
       cookbook cookbook_name
     end
   end
+
+  directory  "#{node['bash_it']['dir']}/iterm" do
+    owner node['current_user']
+    mode 00777
+    recursive true
+    action :create
+  end
+
+  remote_file "#{node['bash_it']['dir']}/iterm/Tomorrow.itermcolors" do
+    owner node['current_user']
+    source "https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/iTerm2/Tomorrow.itermcolors"
+    mode 00777
+    action :create_if_missing
+  end
+
+  remote_file "#{node['bash_it']['dir']}/iterm/Tomorrow-Night-Eighties.itermcolors" do
+    owner node['current_user']
+    source "https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/iTerm2/Tomorrow%20Night%20Eighties.itermcolors"
+    mode 00777
+    action :create_if_missing
+  end
+
 end
