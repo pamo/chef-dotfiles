@@ -1,8 +1,8 @@
 node.default['bash_it'] ={
   'enabled_plugins' => {
-    'aliases'    => %w[ansible bundler general git heroku homebrew osx vagrant vim laravel],
-    'completion' => %w[bash-it brew capistrano defaults gem gh git git_flow grunt gulp packer pip rake ssh tmux vagrant virtualbox],
-    'plugins'    => %w[base git ssh vagrant extract node nvm osx ruby]
+    'aliases'    => %w[atom clipboard fuck general git heroku homebrew-cask homebrew osx vagrant vim],
+    'completion' => %w[bash-it brew defaults dirs gh git grunt gulp npm ssh vagrant virtualbox],
+    'plugins'    => %w[alias-completion base battery browser dirs explain extract git history jekyll less-pretty-cat node osx proxy ssh]
   },
   'custom_plugins' => {
       "dotfiles" => %w[
@@ -14,9 +14,9 @@ node.default['bash_it'] ={
         bash_it/custom/rbenv.bash
       ]
   },
-  'theme' => 'roderik',
+  'theme' => 'bobby',
   'dir' => '/etc/bash_it',
-  'repository' => 'https://github.com/revans/bash-it.git'
+  'repository' => 'https://github.com/pamo/bash-it.git'
 }
 
 if node["platform"] == "ubuntu"
