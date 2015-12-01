@@ -1,9 +1,6 @@
 # Set the default editor
 if [ -f /usr/local/bin/subl ]; then
     export EDITOR='subl -w'
-elif [ -f /usr/local/bin/mate ]; then
-    export EDITOR='mate'
-    export GIT_EDITOR='mate -wl1'
 else
     export EDITOR="vim"
 fi
@@ -12,9 +9,6 @@ fi
 export COPYFILE_DISABLE=true
 
 export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
-
-# fix multibyte errors in ruby 1.9.x
-#export RUBYOPT='-Ku'
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
@@ -38,3 +32,11 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+export JBOSS_HOME=/usr/local/opt/jboss-as/libexec
+export PATH=${PATH}:${JBOSS_HOME}/bin
+
+export VIRTUALENV_DISTRIBUTE=true
+export PIP_VIRTUALENV_BASE=$HOME/.virtualenvs
+export PIP_REQUIRE_VIRTUALENV=true
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache

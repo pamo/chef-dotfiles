@@ -11,7 +11,6 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias dev="cd ~/Development"
-alias p="cd /home/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -96,7 +95,6 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
@@ -144,14 +142,6 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
-# Open a manpage in Preview, which can be saved to PDF
-function pman {
-   man -t "${1}" | open -f -a /Applications/Preview.app
-}
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias man="pman"
-fi
-
 alias kd="cd /opt/kDeploy/tools"
 
 # Lock the screen (when going AFK)
@@ -169,6 +159,7 @@ alias varnishon='iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 80 
 alias varnishoff='iptables -t nat -D PREROUTING -i eth0 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 6081;iptables -t nat -D PREROUTING -i eth0 -p tcp -m tcp --dport 6081 -j REDIRECT --to-ports 80'
 alias varnishstatus='iptables -L -t nat |grep -q 6081; if [ "test$?" = "test0" ]; then echo "Varnish On"; else echo "Varnish Off"; fi'
 
-# Get IPs
+# Get external IP
 alias external_ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias internal_ip='ifconfig en0 | awk "{ print $2}" | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"'
+
