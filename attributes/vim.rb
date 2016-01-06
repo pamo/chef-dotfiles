@@ -9,5 +9,6 @@ node.default["dotfiles"]["vim"]["bundle"] = [
   {"nerdtree" => "https://github.com/scrooloose/nerdtree.git"},
   {"Ag" => "https://github.com/rking/ag.vim"},
   {"titlecase" => "https://github.com/christoomey/vim-titlecase"},
-  {"commentary" => "git://github.com/tpope/vim-commentary.git"}
+  {"commentary" => "git://github.com/tpope/vim-commentary.git"},
+  {"bracketed-paste" => "git://github.com/ConradIrwin/vim-bracketed-paste.git"}
 ]
