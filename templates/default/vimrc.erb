@@ -38,7 +38,6 @@ set noswapfile
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-set runtimepath^=~/.vim/bundle/ag
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -48,6 +47,9 @@ let g:syntastic_javascript_checkers = ['eslint', 'jscs']
 let g:syntastic_ruby_checkers = ['rubylint']
 let g:syntastic_puppet_checkers = ['puppet', 'puppetlint']
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_exec_path ='~/.vim/bundle/editorconfig-vim'
 
 " Disable help menu
 inoremap <F1> <ESC>
@@ -88,3 +90,4 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g'\"" | endif
 endif
+set runtimepath^=~/.vim/bundle/ag
