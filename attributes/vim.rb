@@ -11,4 +11,5 @@ node.default["dotfiles"]["vim"]["bundle"] = [
   {"titlecase" => "https://github.com/christoomey/vim-titlecase"},
   {"commentary" => "git://github.com/tpope/vim-commentary.git"},
   {"bracketed-paste" => "git://github.com/ConradIrwin/vim-bracketed-paste.git"}
+  {"editorconfig" => "git://github.com/editorconfig/editorconfig-vim.git"}
 ]
