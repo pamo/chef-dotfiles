@@ -12,6 +12,9 @@ node.default["dotfiles"]["vim"]["bundle"] = [
   {"surround" => "git://github.com/tpope/vim-surround.git"},
   {"repeat" => "git://github.com/tpope/vim-repeat.git"},
   {"commentary" => "git://github.com/tpope/vim-commentary.git"},
-  {"bracketed-paste" => "git://github.com/ConradIrwin/vim-bracketed-paste.git"}
-  {"editorconfig" => "git://github.com/editorconfig/editorconfig-vim.git"}
+  {"bracketed-paste" => "git://github.com/ConradIrwin/vim-bracketed-paste.git"},
+  {"editorconfig" => "git://github.com/editorconfig/editorconfig-vim.git"},
+  {"vim-autoformat" => "git@github.com:Chiel92/vim-autoformat.git"},
+  {"vim-hyperstyle" => "git@github.com:rstacruz/vim-hyperstyle.git"},
+  {"vim-closer" => "git@github.com:rstacruz/vim-closer.git"}
 ]
