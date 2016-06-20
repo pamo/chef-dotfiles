@@ -32,6 +32,7 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export PATH="/usr/local/sbin:$PATH"
 
 export JBOSS_HOME=/usr/local/opt/jboss-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
