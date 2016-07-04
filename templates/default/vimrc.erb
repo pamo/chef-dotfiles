@@ -7,6 +7,9 @@ set background=dark
 colorscheme Tomorrow-Night-Eighties
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
+set spelllang=en_us,es_ES
+autocmd BufRead,BufNewFile *.md set spell
 
 set pastetoggle=<F2>
 set number
@@ -17,7 +20,7 @@ set nowritebackup
 set autoindent
 set history=50
 
-set ruler                   " show the cusor position at all times
+set ruler                   " show the cursor position at all times
 set showcmd                 " display incomplete commands
 set nohlsearch              " don't highlight searched phrases
 set ignorecase              " case-insensitive search
@@ -30,11 +33,16 @@ set clipboard=unnamed       " yank and paste with system clipboard
 set tabstop=2               " tab spacing
 set softtabstop=2           " unify
 set shiftwidth=2            " indent/outdent by 4 cols
-set shiftround              " always indent/outdent to the nearest tabstop
+set shiftround              " always indent/outdent to the nearest tab stop
 set expandtab               " use spaces instead of tabs
 set smarttab                " use tabs at the start of a line, spaces elsewhere
-set list                    " show trailing whitespace
+set list                    " show trailing white space
 set listchars=tab:▸\ ,trail:▫
+
+" Fold Defaults
+set foldmethod=indent
+set foldnestmax=10
+set foldlevel=1
 
 set visualbell
 set noerrorbells
