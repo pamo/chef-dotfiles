@@ -32,6 +32,7 @@ node['dotfiles']['vimusers'].each do |username|
       mode 00755
       recursive true
     end
+
     repohash.each do |repos|
       repos.each do |repo|
         git "#{homepath.call}/.vim/#{folder}/#{repo[0]}" do
@@ -53,28 +54,33 @@ node['dotfiles']['vimusers'].each do |username|
   end
 
   remote_file "#{homepath.call}/.vim/colors/Tomorrow.vim" do
-      source "https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow.vim"
-      mode 00755
-      owner username
-      action :create_if_missing
+    source "https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow.vim"
+    mode 00755
+    owner username
+    action :create_if_missing
   end
-  
+
   remote_file "#{homepath.call}/.vim/colors/Tomorrow-Night-Eighties.vim" do
-      source "https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim"
-      mode 00755
-      owner username
-      action :create_if_missing
+    source "https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night-Eighties.vim"
+    mode 00755
+    owner username
+    action :create_if_missing
   end
-  
+
   remote_file "#{homepath.call}/.vim/colors/base16-ocean.vim" do
-      source "https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-ocean.vim"
-      mode 00755
-      owner username
-      action :create_if_missing
+    source "https://raw.githubusercontent.com/chriskempson/base16-vim/master/colors/base16-ocean.vim"
+    mode 00755
+    owner username
+    action :create_if_missing
   end
-  
+
   template "#{homepath.call}/.vimrc" do
     source "vimrc.erb"
+    owner username
+  end
+
+  template "#{homepath.call}/.vim/autoload/mappings.vim" do
+    source "mappings.vim"
     owner username
   end
 end

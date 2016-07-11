@@ -5,10 +5,8 @@ filetype plugin indent on
 set t_Co=256
 set background=dark
 colorscheme Tomorrow-Night-Eighties
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
-set spelllang=en_us,es_ES
+set spelllang=en_us,es_es
 autocmd BufRead,BufNewFile *.md set spell
 
 set pastetoggle=<F2>
@@ -105,6 +103,24 @@ autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+"""
+" Custom mappings
+"""
+" Move focus to splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l"
+
+" <Leader>r -- Cycle through relativenumber + number, number (only), and no
+" numbering (mnemonic: relative).
+nnoremap <silent> <Leader>r :call mappings#cycle_numbering()<CR>
+
+" <Leader>zz -- Zap trailing whitespace in the current buffer.
+" As this one is somewhat destructive and relatively close to the
+" oft-used <leader>a mapping, make this one a double key-stroke.
+nnoremap <silent> <Leader>zz :call mappings#zap()<CR>
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
